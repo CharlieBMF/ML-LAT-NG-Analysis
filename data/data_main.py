@@ -1,7 +1,8 @@
 import pandas as pd
 import time
 
-workbook_main = pd.read_excel('ALL_LAT.xlsx', engine='openpyxl', sheet_name='A')
+
+workbook_main = pd.read_excel('ALL_LAT.xlsx', engine='openpyxl', sheet_name='H')
 workbook_temp = pd.read_excel('N24Q0003.xlsx',
                          engine='openpyxl',
                          sheet_name='All',
@@ -24,7 +25,6 @@ for i in range(len(workbook_main)):
                                           sheet_name='All',
                                           header=4,
                                           usecols="D, I:Q, Z:AQ, AX:AZ, BK:CE, CO:DK, DT:DW, EE:EF, EM:EW, EZ:FC, FF, FH:FK, FN")
-
         ds = workbook_temp[workbook_temp['Barcode'] == workbook_main.iloc[i]['nr seryjny']]
         final = final.append(ds, ignore_index=True)
         print('Finished step..', len(final))
@@ -33,7 +33,8 @@ for i in range(len(workbook_main)):
         final = final.append(empty, ignore_index=True)
         skipped_buddy_counter += 1
     finally:
-        with pd.ExcelWriter('combined.xlsx') as writer:
-            final.to_excel(writer)
+        if i % 10 == 0:
+            with pd.ExcelWriter('combinedH.xlsx') as writer:
+                final.to_excel(writer)
         end = time.time()
         print('This loop took.. ', end - start)
