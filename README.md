@@ -35,4 +35,5 @@ This point collect all pieces (all temperatures and all gates) in one pool of da
 Collect a production data for each piece from main data file using data_main.py from data.
 Finally creates a new xlsx file with judgement from workshop and all production data columns generally pre-processed to avoid categorical data or data which is not crucial: <br></br>
 <img src="https://user-images.githubusercontent.com/109242797/216572748-bad770f1-c6e6-4804-80ad-2d6ec53a9f0f.png" alt='not found' title='LOT Data File'>
-
+<h2> Decision Tree Classification </h2>
+First attempt to check the data using Decision Tree Classification
