@@ -40,3 +40,5 @@ First attempt to check the data using Decision Tree Classification
 
 logisticregres - linear
 knn - nonlinear
+svm - linear
+svm kernel - nonlinear
