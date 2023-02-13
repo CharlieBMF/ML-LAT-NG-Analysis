@@ -79,12 +79,33 @@ Svm, by analogy with LogistiRegression, is a linear method that should not be us
 <h3>Result </h3>
 In this case, a non-linear kernel for the svm method was used. this resulted in the correct classification of one piece as NG. Despite this, it is difficult for these methods to find a relationship that causes a wider division of elements as NG groups.
 
+<h2> Naive Bayes </h2>
+<h3>Finding best parameters by GridSearchCV gave results as follows:</h3>
+<p><img src="https://user-images.githubusercontent.com/109242797/218466875-7582ff5e-4767-42ba-a579-b5b8054b5d9d.png" alt='not found' title='Parameters for NB'></p>
+
+<h3>Confusion Matrix:</h3>
+<p><img src="https://user-images.githubusercontent.com/109242797/218466955-f0e3bc2d-3cf0-493a-994b-4363dd54f336.png" alt='not found' title='CM for NB'></p>
+
+
+<h3>Result </h3>
+Naive bayes assigned all pieces to the group ok
 
 
 <h2> Decision Tree Classification </h2>
-First attempt to check the data using Decision Tree Classification
+Decision tree is the first of the methods that found dependencies that match the pieces to the NG group. Therefore, a different approach was considered for this method. First, the confusion matrix and classification report for raw data were checked.
+<p><img src="https://user-images.githubusercontent.com/109242797/218467895-4adf4da4-2bd2-4bba-b3c4-e5e4e92e81b9.png" alt='not found' title='DTRE'></p>
+<p> The precision for the ok group increased compared to the previous methods, however, the recall significantly decreased. In the case of the ng group, the results are not correct </p>
+<h3> Scaling </h3>
+In the next step, an attempt was made to scale the data and check the effect on the results
+<p><img src="https://user-images.githubusercontent.com/109242797/218468616-97e00e71-6e14-4dce-9458-e3c234d4efbc.png" alt='not found' title='DTRE'></p>
+<p> There was no significant impact on the data in the case of rescaling the input data. </p>
 
-logisticregres - linear
-knn - nonlinear
-svm - linear
-svm kernel - nonlinear
+<h3> Entropy </h3>
+<p>In the final step, it was checked how changing the evaluation criteria for entropy would affect the results </p>
+<p><img src="https://user-images.githubusercontent.com/109242797/218469037-9b94a15e-3d38-44ab-8c82-e338895407c3.png" alt='not found' title='DTRE'></p>
+<p> Changing the criterion to entropy significantly improves the results. There has been an increase in precision for NG pieces, even though their recall has decreased. In the case of the OK group, the recall was increased while the accuracy of the assessment was maintained </p>
+
+<h3> Graph </h3> 
+<p>An extended graph with a maximum level of 10 has been generated. </p>
+<p><img src="https://user-images.githubusercontent.com/109242797/218469602-908a0056-1599-478d-8ee9-4b71f7f148f3.png" alt='not found' title='GRAph'></p>
+
