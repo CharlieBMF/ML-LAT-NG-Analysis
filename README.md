@@ -39,6 +39,48 @@ This point collect all pieces (all temperatures and all gates) in one pool of da
 Collect a production data for each piece from main data file using data_main.py from data.
 Finally creates a new xlsx file with judgement from workshop and all production data columns generally pre-processed to avoid categorical data or data which is not crucial: <br></br>
 <img src="https://user-images.githubusercontent.com/109242797/216572748-bad770f1-c6e6-4804-80ad-2d6ec53a9f0f.png" alt='not found' title='LOT Data File'>
+<h2> General Schema for ML Methods: </h2>
+<p>Each of the ML methods used is based on loading the necessary libraries, loading the data file created in the previous stage, scaling the data, finding the best parameters for the method using GridSearchCv, and finally creating a prediction model and estimating its effectiveness</p>
+<h2> Logistic Regression </h2>
+<h3>Finding best parameters by GridSearchCV gave results as follows:</h3>
+<p><img src="https://user-images.githubusercontent.com/109242797/218461534-1aa6ec05-fc18-482a-a21c-b694b08a8852.png" alt='not found' title='Parameters for LR'></p>
+
+<h3>Confusion Matrix:</h3>
+<p><img src="https://user-images.githubusercontent.com/109242797/218461587-b38b8fbf-cb53-4710-abbc-94f9534467cc.png" alt='not found' title='CM for LR'></p>
+
+<h3>Result </h3>
+Logisticregression is a linear ML method. Using it in the above, non-linear example, as intended, does not bring any benefits. All of the samples were assigned to the OK group.
+
+<h2> K-Nearest Neighbors </h2>
+<h3>Finding best parameters by GridSearchCV gave results as follows:</h3>
+<p><img src="https://user-images.githubusercontent.com/109242797/218464154-c338be66-43bf-4fae-be9e-32186b43444f.png" alt='not found' title='Parameters for KNN'></p>
+
+<h3>Confusion Matrix:</h3>
+<p><img src="https://user-images.githubusercontent.com/109242797/218464286-5de006bf-f5f9-45e9-99ff-733d075dfceb.png" alt='not found' title='CM for KNN'></p>
+
+<h3>Result </h3>
+The knn method gave slightly better results than the linear logisticregression. Some of the pieces were assigned to the NG group, but they were both ok and actually ng. Their distribution is 50/50 so it can be considered random. Anyway method find some reason to consider it as NG. Accuracy is also slightly better thank LR.
+
+<h2> Support Vector Machine </h2>
+<h3>Finding best parameters by GridSearchCV gave results as follows:</h3>
+<p><img src="https://user-images.githubusercontent.com/109242797/218465165-b069ab16-41d1-44b9-9175-71e01a152e73.png" alt='not found' title='Parameters for SVM'></p>
+
+<h3>Confusion Matrix:</h3>
+<p><img src="https://user-images.githubusercontent.com/109242797/218465231-16102e3d-9bcd-4eae-91bf-d04a32e8bde7.png" alt='not found' title='CM for SVM'></p>
+
+<h3>Result </h3>
+Svm, by analogy with LogistiRegression, is a linear method that should not be used in the above case. Hence, the data is identical to that of LogisticRegression, i.e. all pieces have been assigned to the OK group.
+
+<h2> Kernel SVM </h2>
+
+<h3>Confusion Matrix:</h3>
+<p><img src="https://user-images.githubusercontent.com/109242797/218465771-5108b307-2b1d-4d24-b2fc-f45fb3e38649.png" alt='not found' title='CM for Kernel SVM'></p>
+
+<h3>Result </h3>
+In this case, a non-linear kernel for the svm method was used. this resulted in the correct classification of one piece as NG. Despite this, it is difficult for these methods to find a relationship that causes a wider division of elements as NG groups.
+
+
+
 <h2> Decision Tree Classification </h2>
 First attempt to check the data using Decision Tree Classification
 
