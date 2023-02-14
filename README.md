@@ -142,3 +142,13 @@ In the next step, an attempt was made to scale the data and check the effect on 
 <h3> RESULT RFC with entropy criterion </h3>
 <p>Bearing in mind the conclusions from the use of the decision tree method, the entropy evaluation criterion was also used. This method gave the best results in the case of a decision tree, and it turned out the same in this case. For the estimator equal to 100, the precision of pieces in the NG group reached as much as 78%. Although only 9 pieces (of which 2 incorrectly) were assigned to this group, the result of 7 correctly assigned pieces gives the best result of all the methods used. These 7 pieces must have critical data affecting their correct assignment to the group.</P>
 In the case of the estimator equal to 100 the results were the best. It is true that only 3% of the pieces were assigned to the ng group, but out of the 9 pieces assigned, as many as 7 were assigned correctly. On this basis, the production data of these 7 units can be analyzed.
+
+<h2> XGBoost </h2>
+<h3>Finding best parameters by GridSearchCV gave results as follows:</h3>
+<p><img src="https://user-images.githubusercontent.com/109242797/218692476-7327481c-e664-46cc-809b-8a921de5782e.png" alt='not found' title='Parameters for xgb'></p>
+
+<h3>Confusion Matrix:</h3>
+<p><img src="https://user-images.githubusercontent.com/109242797/218692576-9e9b0e7e-49cf-48ef-b368-fdfb13ec55d6.png" alt='not found' title='CM for xgb'></p>
+
+<h3>Result </h3>
+Finally, an additional xgboost method was used, giving above-average results in other applications. However, also in the case of this method, it was impossible to correctly assign the elements to the NG group, as a result of which 28 elements were assigned to it, of which only half should be included there.
