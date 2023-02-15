@@ -111,35 +111,35 @@ In the next step, an attempt was made to scale the data and check the effect on 
 
 <h2> Random Forest Tree </h2>
 <p> Random forest tree was the final ml method for classification used in this case. </p>
-<h3> RFC without Scaling and n=10 </h3>
+<h3> RFT without Scaling and n=10 </h3>
 <p> First, a random forest tree was tested without input scaling with an estimator of 10 </p>
 <p><img src="https://user-images.githubusercontent.com/109242797/218471029-ea4832c4-e422-40c4-8b55-005f41c7a756.png" alt='not found' title='RFC10'></p>
-<h3> RFC without Scaling and n=1000 </h3>
+<h3> RFT without Scaling and n=1000 </h3>
 
 <p><img src="https://user-images.githubusercontent.com/109242797/218471241-6c401b50-24b1-49db-a22d-44f71edd873c.png" alt='not found' title='RFC1000'></p>
-<h3> RFC without Scaling and n=10000 </h3>
+<h3> RFT without Scaling and n=10000 </h3>
 
 <p><img src="https://user-images.githubusercontent.com/109242797/218471398-55c3b9b4-e799-4dee-9247-059f13555999.png" alt='not found' title='RFC10000'></p>
-<h3>RESULT RFC without Scaling </h3>
+<h3>RESULT RFT without Scaling </h3>
 <p>Results were estimated for three different cases of estimators (10, 1000 and 10000) without scaling the input data. It was observed that changing the estimator values from 10 to 1000 significantly reduces the number of elements assigned to the NG group, improving the precision of this group, but reducing the recall. Increasing the number of estimators from 1000 to 10000 did not cause any changes </p>
 
-<h3> RFC with Scaling and n=100 </h3>
+<h3> RFT with Scaling and n=100 </h3>
 
 <p><img src="https://user-images.githubusercontent.com/109242797/218472536-e4bc7df4-8086-467f-8edd-f675a7d5b06f.png" alt='not found' title='RFC10'></p>
 
-<h3> RFC with Scaling and n=1000 </h3>
+<h3> RFT with Scaling and n=1000 </h3>
 
 <p><img src="https://user-images.githubusercontent.com/109242797/218472615-f0cbbf97-d2fc-4151-9f75-6221bd537e25.png" alt='not found' title='RFC1000'></p>
-<h3>RESULT RFC with Scaling</h3>
+<h3>RESULT RFT with Scaling</h3>
 <p>The influence of input data scaling on the final score was checked. due to the conclusions from the previous step, the tests of the estimators equal to 10 and 10000 were abandoned. Instead, the estimator equal to 100 and the estimator equal to 1000 giving the best result in the previous step were tried. In this case, as in the previous one, the best result was obtained using the estimator equal to 1000 </p>
 
-<h3> RFC with entropy n=100 </h3>
+<h3> RFT with entropy n=100 </h3>
 <p><img src="https://user-images.githubusercontent.com/109242797/218474050-73ad8d3a-9bae-4d60-b0a9-bbfbeea89244.png" alt='not found' title='RFC1000'></p>
 
-<h3> RFC with entropy n=1000 </h3>
+<h3> RFT with entropy n=1000 </h3>
 <p><img src="https://user-images.githubusercontent.com/109242797/218474166-54d59209-f18d-4efc-a61b-3911ab06d7a6.png" alt='not found' title='RFC1000'></p>
 
-<h3> RESULT RFC with entropy criterion </h3>
+<h3> RESULT RFT with entropy criterion </h3>
 <p>Bearing in mind the conclusions from the use of the decision tree method, the entropy evaluation criterion was also used. This method gave the best results in the case of a decision tree, and it turned out the same in this case. For the estimator equal to 100, the precision of pieces in the NG group reached as much as 78%. Although only 9 pieces (of which 2 incorrectly) were assigned to this group, the result of 7 correctly assigned pieces gives the best result of all the methods used. These 7 pieces must have critical data affecting their correct assignment to the group.</P>
 In the case of the estimator equal to 100 the results were the best. It is true that only 3% of the pieces were assigned to the ng group, but out of the 9 pieces assigned, as many as 7 were assigned correctly. On this basis, the production data of these 7 units can be analyzed.
 
