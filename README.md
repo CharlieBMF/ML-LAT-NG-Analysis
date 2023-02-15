@@ -29,8 +29,9 @@ Rows contains data for each produced piece. About 150 columns of data.
 <ul>
 <li>First point is to check OK/NG s/n from workshop and collect production data from separated files.</li>
 <li>Second point is to analyze it using ML Methods.</li>
-<li>Third point is to analyze it trying to predict pressure in each of 3 points of time using ML Methods.</li>
-<li>Fourth point is to analyze it using DL Methods.</li>
+<li>Third point is to analyze it using DL Method </li>
+<li>Fourth point is to analyze it trying to predict pressure in each of 3 points of time using ML Methods.</li>
+<li>Fifth point is to analyze it trying to predict pressure in each of 3 points of time using DL Methods.</li>
 </ul>
 
 <h1> General OK/NG classification </h1>
