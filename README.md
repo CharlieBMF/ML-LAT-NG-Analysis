@@ -153,3 +153,5 @@ In the case of the estimator equal to 100 the results were the best. It is true 
 
 <h3>Result </h3>
 Finally, an additional xgboost method was used, giving above-average results in other applications. However, also in the case of this method, it was impossible to correctly assign the elements to the NG group, as a result of which 28 elements were assigned to it, of which only half should be included there.
+
+<h3> Deep Learning Neural Network </h3>
