@@ -1,5 +1,6 @@
 # ML-LAT-NG-Analysis
 ML Project to analysis diffrence between NG and OK parts from workshop based on their production DATA
+
 <h1> Problem description </h1>
 <p>Some pieces have been classified as not good on workshop. The classification results from the distribution of pressure over time. Pressure is checked in 3 points in time. The problem is to analyze the production data of ok and ng pieces and find the relationship that causes the pieces to be wrong. </p>
 
